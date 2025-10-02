@@ -59,6 +59,7 @@
           {
             "group": "Endpoint examples",
             "pages": [
+              "api-reference/endpoint/createCompany",
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete",
