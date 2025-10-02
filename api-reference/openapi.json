@@ -21,14 +21,16 @@
   "paths": {
         "/api/adm/companies": {
             "post": {
+              "description": "Creates a new plant in the store",
                 "tags": [],
                 "operationId": "Company_CreateEntry",
                 "requestBody": {
+                  "description": "Creates a new Company in the store",
                     "x-name": "model",
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/CompanyCreateCommandRequest"
+                                "$ref":              "#/components/schemas/CompanyCreateCommandRequest"
                             }
                         }
                     },
