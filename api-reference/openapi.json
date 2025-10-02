@@ -246,6 +246,94 @@
   },
   "components": {
     "schemas": {
+      "CompanyCreateCommandRequest": {
+"allOf": [
+{
+"$ref": "#/components/schemas/BaseCommandRequest"
+},
+{
+"type": "object",
+"additionalProperties": false,
+"required": [
+"companyName"
+],
+"properties": {
+"companyName": {
+"type": "string",
+"description": "Company Name",
+"maxLength": 50,
+"minLength": 0
+},
+"addressLine1": {
+"type": "string",
+"description": "Address 1",
+"maxLength": 150,
+"minLength": 0,
+"nullable": true
+},
+"addressLine2": {
+"type": "string",
+"description": "Address 2",
+"maxLength": 150,
+"minLength": 0,
+"nullable": true
+},
+"city": {
+"type": "string",
+"description": "City",
+"maxLength": 150,
+"minLength": 0,
+"nullable": true
+},
+"state": {
+"type": "string",
+"description": "State",
+"maxLength": 50,
+"minLength": 0,
+"nullable": true
+},
+"zip": {
+"type": "string",
+"description": "Zip",
+"maxLength": 15,
+"minLength": 0,
+"nullable": true
+},
+"phoneNumber": {
+"type": "string",
+"description": "Phone Number",
+"maxLength": 7,
+"minLength": 0,
+"nullable": true
+},
+"phoneArea": {
+"type": "string",
+"description": "Phone Area Code",
+"maxLength": 3,
+"minLength": 0,
+"nullable": true
+},
+"phoneExtension": {
+"type": "string",
+"description": "Phone Extension",
+"maxLength": 6,
+"minLength": 0,
+"nullable": true
+},
+"createdByUserId": {
+"type": "string",
+"format": "guid",
+"nullable": true
+}
+}
+}
+]
+},
+      "BaseCommandRequest": {
+            "type": "object",
+              "additionalProperties": false
+        },
+      
       "Plant": {
         "required": [
           "name"
