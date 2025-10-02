@@ -19,6 +19,97 @@
     }
   ],
   "paths": {
+    ,
+        "/api/adm/companies": {
+            "post": {
+                "tags": [],
+                "operationId": "Company_CreateEntry",
+                "requestBody": {
+                    "x-name": "model",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CompanyCreateCommandRequest"
+                            }
+                        }
+                    },
+                    "required": true,
+                    "x-position": 1
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CompanyCreateCommandResponse"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            },
+            "get": {
+                "tags": [
+                    "Company"
+                ],
+                "operationId": "Company_GetEntries",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string",
+                            "format": "guid",
+                            "nullable": true
+                        },
+                        "x-position": 1
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/CompanyQueryResponse"
+                                }
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
     "/plants": {
       "get": {
         "description": "Returns all plants from the system that the user has access to",
