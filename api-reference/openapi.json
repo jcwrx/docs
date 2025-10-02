@@ -21,7 +21,7 @@
   "paths": {
         "/api/adm/companies": {
             "post": {
-              "description": "Creates a new plant in the store",
+              "description": "Creates a new Company in the store",
                 "tags": [],
                 "operationId": "Company_CreateEntry",
                 "requestBody": {
