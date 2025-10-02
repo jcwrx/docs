@@ -19,7 +19,6 @@
     }
   ],
   "paths": {
-    ,
         "/api/adm/companies": {
             "post": {
                 "tags": [],
